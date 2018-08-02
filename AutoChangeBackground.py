@@ -3,7 +3,6 @@ import os
 import xml.etree.cElementTree as ET
 
 a = os.listdir('/usr/share/backgrounds')
-print(a[0])
 
 background = ET.Element("background")
 

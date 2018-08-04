@@ -1,8 +1,8 @@
 import os
 
 import xml.etree.cElementTree as ET
-
-a = os.listdir('/usr/share/backgrounds')
+accepted_extensions = ["jpg", "png"]
+a = [fn for fn in os.listdir("/usr/share/backgrounds") if fn.split(".")[-1] in accepted_extensions]
 
 background = ET.Element("background")
 

@@ -1,6 +1,6 @@
 import os
-
 import xml.etree.cElementTree as ET
+
 accepted_extensions = ["jpg", "png"]
 a = [fn for fn in os.listdir("/usr/share/backgrounds") if fn.split(".")[-1] in accepted_extensions]
 
@@ -27,6 +27,5 @@ for i in a:
 	except Exception as e:
 		ET.SubElement(transition, "to").text = '/usr/share/backgrounds/' + a[0]
 	
-
 tree = ET.ElementTree(background)
 tree.write("bionic.xml")
